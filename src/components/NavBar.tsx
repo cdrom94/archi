@@ -1,20 +1,16 @@
-// // @ts-nocheck
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { data } from "../data";
 import gsap from "gsap";
 import { motion } from "framer-motion";
-import { IData } from "../types";
+import { IData, ITransition } from "../types";
 
-const NavBar = () => {
-	const transition: { duration: number; delay: number; ease: number[] } = { duration: 1, delay: -2, ease: [0.43, 0.13, 0.23, 0.96] };
-	let cursor = React.useRef<HTMLDivElement>(null);
-	const list = React.useRef<HTMLDivElement>(null);
-	const [index, setIndex] = React.useState<number>(3);
+export const NavBar = () => {
+	const transition: ITransition = { duration: 1, delay: -2, ease: [0.43, 0.13, 0.23, 0.96] };
 
-	React.useEffect(() => {
-		document.addEventListener("mousemove", moveCursor);
-	});
+	const cursor = React.useRef<HTMLDivElement>(null);
+
+	const [index, setIndex] = React.useState<number>(0);
 
 	const moveCursor = (e: { pageX: number; pageY: number }) => {
 		gsap.to(cursor.current, {
@@ -26,6 +22,10 @@ const NavBar = () => {
 			delay: 0.03,
 		});
 	};
+
+	React.useEffect(() => {
+		document.addEventListener("mousemove", moveCursor);
+	});
 
 	return (
 		<div>
@@ -40,7 +40,6 @@ const NavBar = () => {
 							exit={{ x: 0, opacity: 0, transition: { duration: 2, ease: transition.ease } }}
 							className={`project p-${i + 1}`}
 							onHoverStart={() => setIndex(i)}
-							ref={list}
 						>
 							<Link to={`/${i}`} className="link">
 								<div
@@ -60,5 +59,3 @@ const NavBar = () => {
 		</div>
 	);
 };
-
-export default NavBar;

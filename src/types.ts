@@ -9,3 +9,9 @@ export interface IData {
 	link: string;
 	carousel: string[];
 }
+
+export interface ITransition {
+	duration: number;
+	delay: number;
+	ease: number[];
+}

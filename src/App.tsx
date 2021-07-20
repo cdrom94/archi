@@ -3,8 +3,8 @@ import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Route, Switch, Link } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Places from "./components/Places";
-import NavBar from "./components/NavBar";
+import { Places } from "./components/Places";
+import { NavBar } from "./components/NavBar";
 
 const App = () => {
 	return (

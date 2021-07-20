@@ -3,11 +3,15 @@ import { RouteComponentProps } from "react-router-dom";
 import { data } from "../data";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { IData } from "../types";
 
-const Places = ({ match }: RouteComponentProps<{ id: string }>) => {
-	const place = data[match.params.id];
+export const Places = ({ match }: RouteComponentProps<{ id: string }>) => {
+	const place: IData = data[match.params.id];
 
-	const animate = {
+	const animate: {
+		duration: number;
+		ease: number[];
+	} = {
 		duration: 0.75,
 		ease: [0.43, 0.13, 0.23, 0.96],
 	};
@@ -97,5 +101,3 @@ const Places = ({ match }: RouteComponentProps<{ id: string }>) => {
 		</motion.div>
 	);
 };
-
-export default Places;

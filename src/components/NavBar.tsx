@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 import { architectureList } from "../data";
 import gsap from "gsap";
 import { motion } from "framer-motion";
-import { ArchitecureData, ArchitecureTransition } from "../types";
+import { ArchitectureData, ArchitectureTransition } from "../types";
 
 export const NavBar = () => {
-	const transition: ArchitecureTransition = { duration: 1, delay: -2, ease: [0.43, 0.13, 0.23, 0.96] };
-
+	const transition: ArchitectureTransition = { duration: 1, delay: -2, ease: [0.43, 0.13, 0.23, 0.96] };
 	const cursor = React.useRef<HTMLDivElement>(null);
-
 	const [index, setIndex] = React.useState<number>(0);
 
 	const moveCursor = (e: { pageX: number; pageY: number }) => {
@@ -32,7 +30,7 @@ export const NavBar = () => {
 			<div ref={cursor} className="cursor" style={{ backgroundImage: `url(${architectureList[index].cursor})` }}></div>
 			<div className="wrapper">
 				<div className="project-list">
-					{architectureList.map((place: ArchitecureData, i: number) => (
+					{architectureList.map((place: ArchitectureData, i: number) => (
 						<motion.h2
 							key={`place${i}`}
 							initial={{ x: 0, opacity: 0 }}

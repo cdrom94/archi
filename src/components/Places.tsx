@@ -3,10 +3,10 @@ import { RouteComponentProps } from "react-router-dom";
 import { architectureList } from "../data";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArchitecureData } from "../types";
+import { ArchitectureData } from "../types";
 
 export const Places = ({ match }: RouteComponentProps<{ id: string }>) => {
-	const place: ArchitecureData = architectureList[match.params.id];
+	const place: ArchitectureData = architectureList[match.params.id];
 
 	const animate: {
 		duration: number;

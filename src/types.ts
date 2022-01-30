@@ -1,4 +1,4 @@
-export interface ArchitecureData {
+export interface ArchitectureData {
 	name: string;
 	location: string;
 	cursor: string;
@@ -10,7 +10,7 @@ export interface ArchitecureData {
 	carousel: string[];
 }
 
-export interface ArchitecureTransition {
+export interface ArchitectureTransition {
 	duration: number;
 	delay: number;
 	ease: number[];

@@ -1,6 +1,6 @@
-import { ArchitecureData } from "./types";
+import { ArchitectureData } from "./types";
 
-export const architectureList: ArchitecureData[] = [
+export const architectureList: ArchitectureData[] = [
 	{
 		name: "Ciudad BBVA",
 		location: "Madrid, Spain",

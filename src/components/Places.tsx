@@ -1,12 +1,12 @@
 import * as React from "react";
 import { RouteComponentProps } from "react-router-dom";
-import { data } from "../data";
+import { architectureList } from "../data";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { IData } from "../types";
+import { ArchitecureData } from "../types";
 
 export const Places = ({ match }: RouteComponentProps<{ id: string }>) => {
-	const place: IData = data[match.params.id];
+	const place: ArchitecureData = architectureList[match.params.id];
 
 	const animate: {
 		duration: number;

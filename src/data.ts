@@ -1,6 +1,6 @@
-import { IData } from "./types";
+import { ArchitecureData } from "./types";
 
-export const data: IData[] = [
+export const architectureList: ArchitecureData[] = [
 	{
 		name: "Ciudad BBVA",
 		location: "Madrid, Spain",

@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { data } from "../data";
+import { architectureList } from "../data";
 import gsap from "gsap";
 import { motion } from "framer-motion";
-import { IData, ITransition } from "../types";
+import { ArchitecureData, ArchitecureTransition } from "../types";
 
 export const NavBar = () => {
-	const transition: ITransition = { duration: 1, delay: -2, ease: [0.43, 0.13, 0.23, 0.96] };
+	const transition: ArchitecureTransition = { duration: 1, delay: -2, ease: [0.43, 0.13, 0.23, 0.96] };
 
 	const cursor = React.useRef<HTMLDivElement>(null);
 
@@ -29,10 +29,10 @@ export const NavBar = () => {
 
 	return (
 		<div>
-			<div ref={cursor} className="cursor" style={{ backgroundImage: `url(${data[index].cursor})` }}></div>
+			<div ref={cursor} className="cursor" style={{ backgroundImage: `url(${architectureList[index].cursor})` }}></div>
 			<div className="wrapper">
 				<div className="project-list">
-					{data.map((place: IData, i: number) => (
+					{architectureList.map((place: ArchitecureData, i: number) => (
 						<motion.h2
 							key={`place${i}`}
 							initial={{ x: 0, opacity: 0 }}

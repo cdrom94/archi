@@ -138,6 +138,7 @@ a {
 	font-weight: lighter;
 	text-transform: lowercase;
 	font-family: 'Questrial', sans-serif;
+	padding-left: 6px;
 }
 
 .wrapper {

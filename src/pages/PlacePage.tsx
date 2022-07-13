@@ -1,5 +1,4 @@
 import * as React from 'react';
-// import { RouteComponentProps } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import { architectureList } from '../data';
 import { Link } from 'react-router-dom';

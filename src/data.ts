@@ -20,7 +20,7 @@ export const architectureList: ArchitectureData[] = [
 	},
 	{
 		url: 'hospital-universitario-rey-juan-carlos',
-		name: 'Hospital Universitario Rey Juan Carlos',
+		name: 'Hospital Universitario Rey Juan Carlos',
 		location: 'Madrid, Spain',
 		cursor: 'https://images.unsplash.com/photo-1481800997946-d2a9f2c82683?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1016&q=80',
 		built: 2012,

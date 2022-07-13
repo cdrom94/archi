@@ -1,4 +1,5 @@
 export interface ArchitectureData {
+	url: string;
 	name: string;
 	location: string;
 	cursor: string;

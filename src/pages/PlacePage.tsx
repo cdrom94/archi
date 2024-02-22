@@ -45,11 +45,11 @@ export const PlacePage = () => {
 					exit={{ opacity: 0, y: -20, transition: { delay: 0.5, ...animate } }}
 					className='description'
 				>
-					<p>architect: {place.architect}</p>
+					<p>architect: {place.architect}</p>
 					<p>
-						area: {place.area} m<sup>2</sup>
+						area: {place.area} m<sup>2</sup>
 					</p>
-					<p>built: {place.built}</p>
+					<p>built: {place.built}</p>
 					<blockquote cite={place.link}>{place.quote}</blockquote>
 					<a className='cite' href={place.link} target='_blank' rel='noopener noreferrer'>
 						<cite>—Wikipedia</cite>
